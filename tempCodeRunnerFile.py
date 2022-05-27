@@ -1,0 +1,1 @@
+                   get_pred_label(np.argmax(model.predict(preprocess(face)), axis=-1)[0]),
