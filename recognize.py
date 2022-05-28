@@ -3,14 +3,14 @@ import urllib
 import numpy as np
 from tensorflow.keras.models import load_model
 
-classifier = cv2.CascadeClassifier("C:\\Users\\kbija\\Documents\\FACE-DETECT-master\\haarcascade_frontalface_default.xml")
-model = load_model("C:\\Users\\kbija\\Documents\\FACE-DETECT-master\\FACE-DETECT.h5")
 
-url = "http://192.168.173.100:8080/shot.jpg"
+classifier = cv2.CascadeClassifier("C:\\Users\\kbija\\Documents\\Simple-Face-Recognition\\haarcascade_frontalface_default.xml")
+model = load_model("C:\\Users\\kbija\\Documents\\Simple-Face-Recognition\\FACE-DETECT.h5")
 
+url = "http://192.168.59.33:8080/shot.jpg"
 
 def get_pred_label(pred):
-    labels = np.array(labels)
+    labels = ['Arnab', 'Ashutosh', 'Bijay-ID-1000', 'Durga', 'Malay', 'sambit']
     return labels[pred]
 
 def preprocess(img):
